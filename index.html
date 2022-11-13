@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
-    <script src="./todo-app.js" defer></script>
+    <script src="./js/todo-app.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function()  {
             let defArr = [{
@@ -24,24 +25,14 @@
                 name: 'Прочесть 10 страниц книги',
                 done: false,
             }, ]
-            createTodoApp(document.getElementById('todo-app'), 'Мои дела', 'my2', defArr);
+            createTodoApp(document.getElementById('todo-app'), 'Мои дела', 'my', defArr);
+            mySwipe('.list-group-item', 'list-group-item-success','my2')
         });
     </script>
 </head>
 
 <body>
-    <div class="container mb-5">
-        <nav class="nav">
-            <a href="./index.html" class="nav-link">Мои дела</a>
-
-            <a href="./mom.html" class="nav-link">Дела мамы</a>
-
-            <a href="./dad.html" class="nav-link">Дела папы</a>
-        </nav>
-    </div>
-
-
-    <div id="todo-app" class="container"></div>
+        <div id="todo-app" class="container"></div>
 
 </body>
 
